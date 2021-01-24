@@ -52,7 +52,7 @@ object Settings {
   val selectionImageX = 20
   val selectionNameX = 20 + 64 + 20
   val selectionY = List (10 + 20, 10 + 20 + 64 + 20, 10 + 20 + 64 + 20 + 64 + 20, 10 + 20 + 64 + 20 + 64 + 20 + 64 + 20)
-  val selectionTitleText = "Choose character by pressing number"
+  val selectionTitleText = "Choose character by typing number"
   val selectionTexts = List ("1. Moonshimmer", "2. Sparklesun", "3. Sunlight", "4. Sweetlight")
   val selectionImages = List (moonshimmer, sparklesun, sunlight, sweetlight)
   val borderX = 200
