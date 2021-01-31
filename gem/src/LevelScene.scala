@@ -107,9 +107,6 @@ object LevelScene extends Scene[ReferenceData, Model, ViewModel] {
   def updateViewModel (context: FrameContext[ReferenceData], model: Model, viewModel: ViewModel): GlobalEvent => Outcome[ViewModel] =
     _ => Outcome (viewModel)
 
-  def place (graphic: Graphic, x: Double, y: Double): Graphic =
-    graphic.moveTo ((x * cellSize).toInt, (y * cellSize).toInt)
-
   def present (context: FrameContext[ReferenceData], model: Model, viewModel: ViewModel): Outcome[SceneUpdateFragment] =
   Outcome {
     val paths =

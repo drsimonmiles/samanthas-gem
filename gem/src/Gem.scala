@@ -27,10 +27,10 @@ object Gem extends IndigoGame[GameViewport, ReferenceData, Model, ViewModel] {
   }
 
   def scenes (bootData: GameViewport): NonEmptyList[Scene[ReferenceData, Model, ViewModel]] =
-    NonEmptyList (SelectionScene, InstructionsScene, LevelScene)
+    NonEmptyList (TitleScene, SelectionScene, InstructionsScene, LevelScene)
 
   def initialScene (bootData: GameViewport): Option[SceneName] =
-    Some (SelectionScene.name)
+    Some (TitleScene.name)
 
   /** Load and decode the level specs on startup. */
   def setup (bootData: GameViewport,
@@ -39,9 +39,8 @@ object Gem extends IndigoGame[GameViewport, ReferenceData, Model, ViewModel] {
     Outcome (Startup.Success (ReferenceData ()))
   }
 
-  def initialViewModel (startupData: ReferenceData, model: Model): Outcome[ViewModel] = {
-    Outcome (ViewModel ())
-  }
+  def initialViewModel (startupData: ReferenceData, model: Model): Outcome[ViewModel] =
+    Outcome (ViewModel (titleGemVelocity = titleGemSpeed, titleGemY = titleGemMinY))
 
   def updateModel (context: FrameContext[ReferenceData], model: Model): GlobalEvent => Outcome[Model] =
     _ => Outcome (model)

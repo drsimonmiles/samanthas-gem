@@ -3,7 +3,7 @@ import indigo._
 object Assets {
   val imageFiles  = Set[String] ("baddies-heart", "exit", "fangtooth", "goodies-heart", "island1", "island2",
     "island3", "magic-stars" ,"magic-ruby", "monster-growly", "moonshimmer", "other-wall", "path", "socks", "sparklesun", "sweetlight",
-    "sunlight", "sword", "treasure-chest", "wall", "boxy_font_small")
+    "sunlight", "sword", "treasure-chest", "wall", "boxy_font_small", "purple")
   val buttonFiles = Set[String] ()
   val textFiles   = Set[String] ()
   val jsonFiles   = Set[String] ()
@@ -28,6 +28,7 @@ object Assets {
   val path: Graphic = graphic ("path", 64, 64)
   val wall: Graphic = graphic ("other-wall", 64, 64)
   val magicStars: Graphic = graphic ("magic-stars", 128, 64)
+  val purple: Graphic = graphic ("purple", 64, 64)
 
   val moonshimmer: Graphic = graphic ("moonshimmer", 64, 64)
   val sparklesun: Graphic = graphic ("sparklesun", 64, 64)

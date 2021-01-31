@@ -1,1 +1,1 @@
-case class ViewModel ()
+case class ViewModel (titleGemY: Double, titleGemVelocity: Double)

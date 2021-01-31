@@ -25,6 +25,9 @@ object Settings {
   def inTrap (x: Double, y: Double): Boolean =
     touching (x, y, guardX - 1.0, guardY)
 
+  def place (graphic: Graphic, x: Double, y: Double): Graphic =
+    graphic.moveTo ((x * cellSize).toInt, (y * cellSize).toInt)
+
   val playerSpeed = 1.0
   val playerStartX = 0.0
   val playerStartY = 0.0
@@ -46,6 +49,11 @@ object Settings {
   val gemY = 1.0
   val exitX = 8.0
   val exitY = 5.0
+
+  val titleGemX = 7.0
+  val titleGemSpeed = 2.0
+  val titleGemMinY = 0.0
+  val titleGemMaxY = 5.0
 
   val selectionTitleX = 10
   val selectionTitleY = 10
